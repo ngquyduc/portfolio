@@ -15,6 +15,15 @@ const Navbar = () => {
     const router = useRouter();
     
     useEffect(() => {
+        if (router.asPath==='/' ||
+        router.asPath==='/#contact' ||
+        router.asPath==='/#about' ||
+        router.asPath==='/#skills' ||
+        router.asPath==='/#projects') {
+            setNavBg('#ecf0f3');
+            setLinkColor('#1f2937');
+        }
+
         if (
             router.asPath==='/monkey' ||
             router.asPath==='/restaurantUI' ||
@@ -24,11 +33,8 @@ const Navbar = () => {
             setNavBg('transparent');
             setLinkColor('#ecf0f3');
         }
-        else {
-            setNavBg('ecf0f3');
-            setLinkColor('#1f2937');
-        }
-    }, [router])
+        
+    }, [router, router.asPath])
 
     const handleNav = () => {
         setNav(!nav);
