@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import avatar from "../public/assets/image.png";
 
 const About = () => {
   return (
@@ -30,7 +31,7 @@ const About = () => {
         <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl glex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
           <Image
             className="rounded-xl"
-            src="/../public/assets/image.png"
+            src={avatar}
             alt="/"
             width="400"
             height="600"
